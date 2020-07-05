@@ -22,7 +22,7 @@ const config: ConfigComponent[] = [
               {
                 id: 'family-1-person-3',
                 component: 'Person',
-                props: {name: 'Grandchild', age: 38, template: 'person-template-1'},
+                props: {name: 'Grandchild', age: 38, template: 'person-template-2'},
               }
             ],
           }
