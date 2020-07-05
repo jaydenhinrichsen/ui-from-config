@@ -3,6 +3,7 @@ import { ConfigComponent, ImportedComponents, DynamicComponentProps } from './ty
 // Paths to components come from frontend
 const COMPONENT_PATHS: {[x: string]: string} = {
   'Person': './Person',
+  'Family': './Family',
 }
 
 const importComponents = (config: ConfigComponent[]) => {

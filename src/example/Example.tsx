@@ -6,30 +6,30 @@ import { ConfigComponent } from './types';
 const config: ConfigComponent[] = [
   {
     id: 'family-1-person-1',
-    component: 'Person',
-    props: {name: 'Parent', age: 98, template: 'person-template-1'},
+    component: 'Family',
+    props: {name: 'Smiths', template: 'family-template-1'},
     children: [
       {
-        id: 'family-1-person-2',
+        id: 'family-1-person-1',
         component: 'Person',
-        props: {name: 'Child', age: 77, template: 'person-template-1'},
+        props: {name: 'Parent', age: 98, template: 'person-template-1'},
         children: [
           {
-            id: 'family-1-person-3',
+            id: 'family-1-person-2',
             component: 'Person',
-            props: {name: 'Grandchild', age: 38, template: 'person-template-1'},
+            props: {name: 'Child', age: 77, template: 'person-template-1'},
             children: [
               {
-                id: 'family-1-person-4',
+                id: 'family-1-person-3',
                 component: 'Person',
-                props: {name: 'Great Grandchild', age: 15, template: 'person-template-2'},
+                props: {name: 'Grandchild', age: 38, template: 'person-template-1'},
               }
             ],
           }
         ],
-      }
+      },
     ],
-  },
+  }
 ];
 
 // Mock config request
