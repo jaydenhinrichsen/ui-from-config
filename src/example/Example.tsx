@@ -5,7 +5,7 @@ import { ConfigComponent } from './types';
 // Mock config that would be received from a config service
 const config: ConfigComponent[] = [
   {
-    id: 'family-1-person-1',
+    id: 'family-1',
     component: 'Family',
     props: {name: 'Smiths', template: 'family-template-1'},
     children: [
@@ -43,8 +43,8 @@ const fakeConfigRequest = () => {
 
 
 // This is a really simple example to explore rendering components based soley
-// on configuration provided. 
-// The components in 'config' are imported and lazy loaded dynamically 
+// on configuration provided.
+// The components in 'config' are imported and lazy loaded dynamically
 export const Example = () => {
   // Really simple example of getting config asychronously
   const [loaded, setLoaded] = React.useState(false);
@@ -74,6 +74,9 @@ export const Example = () => {
     } catch (error) {
       setError('Invalid JSON');
       setEditedConfigData(undefined);
+      setTimeout(() => {
+        setError(undefined);
+      }, 5000);
     }
   };
 
